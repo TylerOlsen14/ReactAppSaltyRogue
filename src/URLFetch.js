@@ -1,16 +1,18 @@
 var fs = require('fs');
 var csv = require('fast-csv');
 
+let url = 'http://www.utahcounty.gov/LandRecords/Property.asp?av_serial='
 
-var SerialNumbers = fs.createReadStream('./SerialNumbers.csv')
-    .pipe(csv())
+
+var stream = fs.createReadStream("./SerialNumbers.csv");
+
+var csvStream = csv()
     .on("data", function(data){
-        var SerialNumbers = parseInt(data);
-        // return SerialNumbers;
-        console.log(SerialNumbers);
+         console.log(data);
     })
-    .on('end', function(){
-        console.log('Read finished.');
+    .on("end", function(){
+         console.log("done");
     });
-
-    
+ 
+var array = stream.pipe(csvStream);
+console.log(array)
