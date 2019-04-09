@@ -1,8 +1,7 @@
 import React, { Component, useState } from 'react';
 import logo from './logo.jpg';
 import './App.css';
-import URLFetch from './URLFetch';
-import cheerio from './cheerio2'
+import cheerio from './cheerio3'
 
 class App extends Component {
   render() {
@@ -15,7 +14,10 @@ class App extends Component {
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
           </div>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"/>
+          <form onSubmit={cheerio}>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"/>
+            <button type="submit"/>
+          </form>
         </div>
       </div>
     );

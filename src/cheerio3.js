@@ -1,3 +1,4 @@
+class cheerio extends Component {
 var request = require('request');
 var cheerio = require('cheerio');
 var readline = require('readline');
@@ -34,5 +35,5 @@ request(`${url}${URL}`, function(err, resp, html) {
         }
       }
 );
-
-// export default cheerio;
+};
+export module {request};
