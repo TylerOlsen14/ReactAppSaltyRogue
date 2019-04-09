@@ -7,14 +7,19 @@ var readline = require('readline');
 var fs = require('fs');
 
 var myInterface = readline.createInterface({
-  input: fs.createReadStream('numbers.csv')
+  input: fs.createReadStream('./SerialNumbers.csv')
 });
 
+let newURL = [];
 let serialNumberArray = [];
-myInterface.on('line', function (line) {
-    serialNumberArray.push('http://www.utahcounty.gov/LandRecords/Property.asp?av_serial=' + line);
-  
-  console.log(serialNumberArray);
+myInterface.on('line',  (line) => {
+  serialNumberArray.push('http://www.utahcounty.gov/LandRecords/Property.asp?av_serial=' + line);
+  // console.log(serialNumberArray);
   //console.log('http://www.utahcounty.gov/LandRecords/Property.asp?av_serial=' + line);
-});
-
+})
+.on('line', () => {
+  // console.log('wut?')
+  // console.log(serialNumberArray)
+  newURL.push(serialNumberArray)
+  console.log(newURL)
+})
