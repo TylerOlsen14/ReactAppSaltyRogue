@@ -9,3 +9,5 @@ request('http://www.utahcounty.gov/LandRecords/Property.asp?av_serial=1004001400
         }
       }
 );
+
+// export default cheerio;
