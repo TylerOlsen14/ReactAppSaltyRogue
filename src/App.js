@@ -11,8 +11,12 @@ class App extends Component {
         <div>
           <img src={logo} alt="Salty Rogue Real Estate"/>
         </div>
-        <URLFetch/>
-        <cheerio/>
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"/>
+        </div>
       </div>
     );
   }
