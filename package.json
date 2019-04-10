@@ -9,6 +9,7 @@
     "fast-csv": "^2.4.1",
     "fs": "0.0.1-security",
     "line-reader": "^0.4.0",
+    "papaparse": "^4.6.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8",
