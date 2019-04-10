@@ -13,7 +13,7 @@ lineReader.eachLine('./URL.csv', function(line, last) {
         const $ = cheerio.load(html);
         const td = $('table tr td table tr td table tr:nth-child(4) td:nth-child(1)');
         const address = (td.text().slice(0, 49))
-        const pair = (address + '\n' + line + '\n')
+        const pair = (address + '\n' + line + '\n' + '\n')
         console.log(pair);
     fs.appendFile('addressURL.csv', pair, (err) => {
         if (err) throw err;
