@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "convert-array-to-csv": "^1.0.6",
     "csv": "^5.1.1",
     "fast-csv": "^2.4.1",
     "fs": "0.0.1-security",
+    "line-reader": "^0.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8",

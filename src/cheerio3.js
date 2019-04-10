@@ -1,8 +1,9 @@
-class cheerio extends Component {
 var request = require('request');
 var cheerio = require('cheerio');
 var readline = require('readline');
 var fs = require('fs');
+
+class cheerio extends Component {
 
 var myInterface = readline.createInterface({
     input: fs.createReadStream('./SerialNumbers.csv')
